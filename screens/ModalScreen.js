@@ -38,57 +38,54 @@ const ModalScreen = () => {
     <SafeAreaView style={{ flex: 1}}>
 
     <View style={{ flex: 1, alignItems:"center", paddingTop:1}}>
-      <Text style={{ height:50, marginTop:50, fontSize:30}}>
-        IMAGE -LOGO-
+
+      <Text style={{textAlign: "center", fontSize:30, fontWeight:"bold", paddingTop:2, marginTop:50, marginBottom:15}}>
+        Welcome, Space Cadets!
       </Text>
 
-      <Text style={{fontSize:15, fontWeight:"bold", paddingTop:2}}>
-        Welcome Orbiters
-      </Text>
-
-      <Text style={{ padding: 30, fontWeight:"bold", color:'purple' }}>
-        Step 1: Profile Pic
+      <Text style={{fontSize:16, textAlign: "center", marginTop:10, padding:10, fontWeight:"bold", color:'purple' }}>
+        Introduce us your best look!
       </Text>
       <TextInput
       value={image}
       onChangeText={text => setImage(text)}
-      placeholder='Enter a Pic URL'/>
-      <Text style={{ padding: 30, fontWeight:"bold", color:'purple' }}>
-        Step 2: Your Name
+      placeholder='insert your picture URL'/>
+      <Text style={{fontSize:16, textAlign: "center", marginTop:10, padding:10, fontWeight:"bold", color:'purple' }}>
+        What should we call you?
       </Text>
       <TextInput
       value={name}
       onChangeText={text => setName(text)}
-      placeholder='Enter your name'/>
-      <Text style={{ padding: 30, fontWeight:"bold", color:'purple' }}>
-        Step 3: Your Age
+      placeholder='type your name'/>
+      <Text style={{fontSize:16,textAlign: "center", marginTop:10, padding:10, fontWeight:"bold", color:'purple' }}>
+        How about your age?
       </Text>
       <TextInput
       value={age}
       onChangeText={text => setAge(text)} 
-      placeholder='Enter your age'
+      placeholder='type your age'
       keyboardType='numeric'
       maxLength={2}/>
-      <Text style={{ padding: 30, fontWeight:"bold", color:'purple' }}>
-        Step 4: Your Bio
+      <Text style={{fontSize:16, textAlign: "center", marginTop:10, padding:10, fontWeight:"bold", color:'purple' }}>
+        Anything to say for future admirers?
       </Text>
       <TextInput
       value={bio}
       onChangeText={text => setBio(text)} 
-      placeholder='Enter your bio'/>
-      <Text style={{ padding: 30, fontWeight:"bold", color:'purple' }}>
-        Step 5: Your Location
+      placeholder='type your bio'/>
+      <Text style={{fontSize:16, textAlign: "center", marginTop:10, padding:10, fontWeight:"bold", color:'purple' }}>
+        Care to tell your Matches where you're from?
       </Text>
       <TextInput 
       value={location}
       onChangeText={text => setLocation(text)}
-      placeholder='Enter your location'/>
+      placeholder='type your location'/>
 
       <TouchableOpacity
       disabled={incompleteForm} 
       style={[styles.button, incompleteForm ? styles.buttonOff : styles.button,]}
       onPress={createUser}>
-        <Text style={{color:"white"}}>Update Profile</Text>
+        <Text style={{color:"white", fontSize:20}}>Update My Profile</Text>
       </TouchableOpacity>
     </View>
     </SafeAreaView>
@@ -99,7 +96,7 @@ export default ModalScreen
 
 const styles = StyleSheet.create({
     button:{
-        marginTop:10,
+        marginTop:50,
         height:60,
         width:250,
         backgroundColor:'#4C3575',
@@ -108,7 +105,7 @@ const styles = StyleSheet.create({
         borderRadius:50,
     },
     buttonOff:{
-        marginTop:10,
+        marginTop:50,
         height:60,
         width:250,
         backgroundColor:'gray',

@@ -27,9 +27,8 @@ const StackNavigator = () => {
                 <Stack.Screen name="Home" component={HomeScreen}/>
                 <Stack.Screen name="Chat" component={ChatScreen}/>
                 <Stack.Screen name="Profile" component={ProfileScreen}/>
-
-
             </Stack.Group>
+
             <Stack.Group screenOptions={{ presentation: 'modal'}}>
                 <Stack.Screen name="Modal" component={ModalScreen}/>
             </Stack.Group>
@@ -45,6 +44,7 @@ const StackNavigator = () => {
             <Stack.Screen name="Register" component={RegisterScreen}/>
             </>
             )}
+
     </Stack.Navigator>
   )
 }

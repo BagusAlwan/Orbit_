@@ -157,7 +157,7 @@ const HomeScreen = () => {
         renderCard={(card) => card ? (
           <View 
           key={card.id} 
-          style={{ height:600, borderRadius: 20, marginTop:-20 }}
+          style={{ height:450, borderRadius: 20, marginTop:-40 }}
           >
             <Image 
             style={{ height:"100%", width:"100%", borderRadius: 20}} 
@@ -176,7 +176,7 @@ const HomeScreen = () => {
               styles.endCard, styles.cardShadow,
             ]}
             >
-              <Text style={{fontWeight:"bold"}}> No More Profiles</Text>
+              <Text style={{fontWeight:"bold"}}>No More Profiles...</Text>
               <Image 
               style={{height:20, width:"100%"}}
               height={100}
@@ -192,15 +192,26 @@ const HomeScreen = () => {
 
   
       {/* End Cards */}
-        
-      <View>
-      <TouchableOpacity
-                onPress={() => navigation.navigate('Chat')}
-                style={styles.button}>
+      
+      <View style={{flex:0.25, alignItems:"center", alignContent:"space-around"}}>
+        <View style={{flex:1, flexDirection:"row", marginTop:30}}>
+            <View>
+              <TouchableOpacity
+                        onPress={() => navigation.navigate('Chat')}
+                        style={styles.button}>
+                        <Text style={{fontWeight: 'bold', fontSize:18, color:'white'}}>All Matches</Text>
+              </TouchableOpacity>
+            </View>
 
-                <Text style={{fontWeight: 'bold', fontSize:18, color:'white'}}>GO to Chat</Text>
-            </TouchableOpacity>
-    </View>
+            <View>
+              <TouchableOpacity
+                      onPress={() => navigation.navigate('Profile')}
+                      style={styles.button}>
+                      <Text style={{fontWeight: 'bold', fontSize:18, color:'white'}}>Profile</Text>
+              </TouchableOpacity>
+            </View>
+        </View>
+      </View>
 
     </SafeAreaView>
   )
@@ -210,9 +221,8 @@ export default HomeScreen
 
 const styles = StyleSheet.create({
   text: {
-    marginTop:7,fontSize:50, height:80,
-        textAlign:'center',
-
+    marginTop:20, marginBottom:2, fontSize:50, height:80,
+        textAlign:'center', fontWeight: 'bold',
   },
   name: {
     fontSize: 30,
@@ -233,7 +243,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity:  0.21,
     shadowRadius: 7.68,
-    elevation: 10
+    elevation: 10,
   },
   endCard: {
     backgroundColor: "white",
@@ -243,9 +253,9 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   button:{
-    marginTop:200, marginBottom:15, marginLeft: 120,
+    marginBottom:35,
     height:50,
-    width:180,
+    width:130,
     backgroundColor:'#4C3575',
     alignItems:'center',
     justifyContent:'center',

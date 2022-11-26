@@ -1,9 +1,8 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet,SafeAreaView } from 'react-native'
 import React from 'react'
 import useAuth from '../hooks/useAuth'
 import { async } from '@firebase/util';
-
-
+import ChatList from '../screens/ChatList';
 
 const ChatScreen = () => {
     
@@ -16,15 +15,20 @@ const ChatScreen = () => {
             console.log(err.message);
         }
     };
-  return (
-    <View>
-      <TouchableOpacity
-                onPress={handleLogOut}
-                style={styles.button}>
 
-                <Text style={{fontWeight: 'bold', fontSize:18, color:'white'}}>LogOut</Text>
-            </TouchableOpacity>
-    </View>
+
+  return (
+    <SafeAreaView>
+        <ChatList/>
+        <View>
+        <TouchableOpacity
+                    onPress={handleLogOut}
+                    style={styles.button}>
+
+                    <Text style={{fontWeight: 'bold', fontSize:18, color:'white'}}>LogOut</Text>
+        </TouchableOpacity>
+        </View>
+    </SafeAreaView>
   )
 }
 

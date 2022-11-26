@@ -21,10 +21,10 @@ const MatchedScreen = () => {
       </View>
       <View>
       <Image 
-              style={{height:150, width:"100%"}}
+              style={{height:"100%", width:"100%"}}
               height={100}
               width={100}
-              source={{ uri: "https://images.emojiterra.com/google/android-oreo/512px/1f64f.png"}}    
+              source={{ uri: "https://banner2.cleanpng.com/20180418/gyq/kisspng-wink-emoji-emoticon-smile-wwt-washington-emoticons-vector-5ad7cdf98bd7e6.1505557515240924095728.jpg"}}    
               />
       </View>
 
